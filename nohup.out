@@ -1,0 +1,81 @@
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:9000
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1355:14)
+    at listenInCluster (net.js:1396:12)
+    at doListen (net.js:1505:7)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+    at Function.Module.runMain (module.js:695:11)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+Traceback (most recent call last):
+  File "daily_price_grab.py", line 27, in <module>
+    f = web.DataReader([ticker], 'robinhood')
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/data.py", line 395, in DataReader
+    session=session).read()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 77, in read
+    return self._read_one_data(self.url, self.params)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 86, in _read_one_data
+    out = self._get_response(url, params=params).json()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 132, in _get_response
+    headers=headers)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "daily_price_grab.py", line 27, in <module>
+    f = web.DataReader([ticker], 'robinhood')
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/data.py", line 395, in DataReader
+    session=session).read()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 77, in read
+    return self._read_one_data(self.url, self.params)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 86, in _read_one_data
+    out = self._get_response(url, params=params).json()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 132, in _get_response
+    headers=headers)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 326, in connect
+    ssl_context=context)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py", line 441, in wrap_socket
+    cnx.do_handshake()
+  File "/home/jerseyfinance2018/anaconda3/lib/python3.6/site-packages/OpenSSL/SSL.py", line 1906, in do_handshake
+    result = _lib.SSL_do_handshake(self._ssl)
+KeyboardInterrupt
